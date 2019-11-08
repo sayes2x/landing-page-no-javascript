@@ -1,0 +1,290 @@
+html,
+body {
+  background-color: #0b6136;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+  position: relative;
+}
+body {
+  flex-direction: column;
+  display: flex;
+}
+.content {
+  flex: 1 0 auto;
+}
+a {
+  cursor: pointer;
+}
+a:focus,
+iframe:focus {
+  outline-style: solid;
+  outline-color: #080;
+}
+.skip-header {
+  background-color: white;
+  border-radius: 10px;
+  border-style: none;
+  color: #0c6c3f;
+  font-size: 15px;
+  left: 50%;
+  margin: 0 auto;
+  outline-style: none;
+  padding: 0 7px;
+  position: fixed;
+  text-decoration: none;
+  top: -50px;
+  transform: translateX(-50%);
+  transition: top 600ms;
+  z-index: 2;
+}
+.skip-header:focus {
+  top: 5px;
+}
+
+/* Header */
+header {
+  align-items: flex-end;
+  background: url(./img/header-background-pattern.png) center 10px repeat
+    #0c6c3f;
+  display: flex;
+  justify-content: space-between;
+  min-height: 124px;
+  padding: 0 1vw;
+  position: relative;
+  transition: margin 300ms;
+  z-index: 1;
+}
+.branding {
+  align-self: center;
+  height: 88px;
+}
+.header-links {
+  display: none;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+  text-align: center;
+}
+.main-menu {
+  height: 124px;
+  position: absolute;
+  top: 0;
+  transition: top 300ms, visibility 0ms 300ms;
+  visibility: hidden;
+  width: 100vw;
+}
+.mobile-links {
+  background-color: #0b6136;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.mobile-links a {
+  color: white;
+  display: block;
+  font-size: 17px;
+  outline-color: white;
+  padding: 4px;
+  text-decoration: none;
+}
+.mobile-links a:hover {
+  color: #acbfb7;
+}
+header a {
+  color: white;
+  font-size: 17px;
+  margin: 0 1vw;
+  text-align: center;
+  text-decoration: none;
+}
+header a:hover {
+  color: #acbfb7;
+}
+header a:focus {
+  outline-color: white;
+  outline-style: solid;
+}
+.menu-open {
+  align-self: center;
+  margin: 0 8px;
+  padding: 5px 5px 0px 5px;
+}
+.open-image {
+  height: 27px;
+  width: 27px;
+}
+.menu-close {
+  align-self: center;
+  display: none;
+  margin: 0 8px;
+  padding: 5px 5px 0px 5px;
+}
+.close-image {
+  height: 27px;
+  width: 27px;
+}
+.bar {
+  background-color: #acbfb7;
+  height: 4px;
+}
+
+/* Main */
+main {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10vw;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main a {
+  color: #080;
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+.desktop {
+  display: none;
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+aside {
+  flex-grow: 1;
+}
+.collaborate {
+  height: auto;
+  margin-top: 26.56px;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-size: 12px;
+  padding: 16px 0;
+}
+.first-row {
+  margin-bottom: 8px;
+}
+.first-row-1 {
+  display: flex;
+  justify-content: center;
+}
+.first-row-2 {
+  display: flex;
+  justify-content: center;
+}
+.first-row a {
+  font-size: 14px;
+  margin: 0 1vw;
+}
+.center-footer {
+  margin: auto;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #acbfb7;
+}
+footer a:focus {
+  outline-color: white;
+  outline-style: solid;
+}
+
+#main-menu:target {
+  top: 125px;
+  transition: top 300ms, visibility 0ms;
+  visibility: visible;
+}
+#main-menu:target + header {
+  margin-bottom: 94px;
+}
+#main-menu:target + header .menu-open {
+  display: none;
+}
+#main-menu:target + header .menu-close {
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  .skip-header {
+    font-size: 17px;
+  }
+  .first-row {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 718px) {
+  .mobile-links {
+    display: none;
+  }
+  .branding {
+    margin: 0px auto 0px 0px;
+  }
+  .header-links {
+    display: flex;
+    margin-left: 1vw;
+  }
+  .menu-open,
+  .menu-close {
+    display: none;
+  }
+  article {
+    flex-basis: 300px;
+    flex-grow: 3;
+    margin-right: 25px;
+  }
+  aside {
+    flex-basis: 150px;
+    flex-grow: 1;
+    margin-left: 25px;
+  }
+  .desktop {
+    display: inline;
+  }
+  .mobile {
+    display: none;
+  }
+  .iframe-container {
+    margin-bottom: 26.56px;
+  }
+  .collaborate {
+    margin-top: 26.56px;
+  }
+  #main-menu:target + header {
+    margin-bottom: 0;
+  }
+  #main-menu:target + header .menu-close {
+    display: none;
+  }
+}
