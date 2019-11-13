@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   height: 100%;
   margin: 0px;
@@ -21,17 +21,15 @@ a:focus,
 iframe:focus {
   outline-style: solid;
   outline-color: #a0222b;
-  outline-width: medium;
+  outline-width: thin;
 }
 .skip-header {
   background-color: #ebfbea;
   border-radius: 10px;
-  border-style: none;
   color: #a0222b;
   font-size: 15px;
   left: 50%;
   margin: 0 auto;
-  outline-style: none;
   padding: 0 7px;
   position: fixed;
   text-decoration: none;
@@ -48,14 +46,15 @@ iframe:focus {
 /* Header */
 header {
   align-items: flex-end;
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     #60db57 0%,
     #9be996 33%,
     #c3f2c0 50%,
     #afedab 66%,
     #73e06c 100%
-  );
+  ); */
+  background: url(./img/circuit-board.svg) center repeat #73e06c;
   display: flex;
   justify-content: space-between;
   min-height: 124px;
@@ -77,7 +76,6 @@ header {
 }
 .main-menu {
   background-color: #73e06c;
-  /* height: 124px; */
   position: absolute;
   top: 0;
   transition: top 300ms, visibility 0ms 300ms;
@@ -89,7 +87,6 @@ header {
   padding: 6px;
 }
 .mobile-links {
-  /* background-color: #73e06c; */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -97,11 +94,9 @@ header {
 }
 .mobile-links a {
   color: #a0222b;
-  /* display: block; */
   font-size: 17px;
   font-weight: bold;
   outline-color: #a0222b;
-  /* padding: 4px; */
   text-decoration: none;
 }
 .mobile-links a:hover {
@@ -151,18 +146,27 @@ main {
 }
 h1 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: bold;
+  color: #a0222b;
 }
 h2 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
+  color: #a0222b;
+}
+strong {
+  color: #a0222b;
 }
 main a {
-  color: #080;
+  color: #222ba0;
+  font-weight: 500;
   text-decoration: none;
 }
 main a:hover {
   text-decoration: underline;
+}
+main a:focus {
+  outline-color: #222ba0;
 }
 .desktop {
   display: none;
@@ -188,16 +192,29 @@ aside {
   margin-top: 26.56px;
   width: 100%;
 }
+main ul {
+  list-style: none;
+}
+main ul li::before {
+  content: '\2022';
+  color: #222ba0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
 
 /* Footer */
 footer {
   align-items: center;
-  background-color: black;
-  color: white;
+  background: url(./img/circuit-board.svg) center 10px repeat;
+  border-top: 1px solid #73e06c;
+  color: #a0222b;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   font-size: 12px;
+  font-weight: bold;
   padding: 16px 0;
 }
 .first-row {
@@ -219,14 +236,15 @@ footer {
   margin: auto;
 }
 footer a {
-  color: white;
+  color: #a0222b;
+  font-weight: bold;
   text-decoration: none;
 }
 footer a:hover {
-  color: #acbfb7;
+  color: #d7424c;
 }
 footer a:focus {
-  outline-color: white;
+  outline-color: #a0222b;
   outline-style: solid;
 }
 
@@ -254,7 +272,7 @@ footer a:focus {
   }
 }
 
-@media screen and (min-width: 831px) {
+@media screen and (min-width: 859px) {
   .mobile-links {
     display: none;
   }
