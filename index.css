@@ -45,14 +45,6 @@ a:focus {
 /* Header */
 header {
   align-items: flex-end;
-  /* background: linear-gradient(
-    0deg,
-    #60db57 0%,
-    #9be996 33%,
-    #c3f2c0 50%,
-    #afedab 66%,
-    #73e06c 100%
-  ); */
   background: url(./img/circuit-board.svg) center repeat #73e06c;
   display: flex;
   justify-content: space-between;
